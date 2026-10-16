@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. John Mwangi Wandeto — AI for Humanity</title>
+<meta name="description" content="Dr. John Mwangi Wandeto — Senior Lecturer and AI researcher at Dedan Kimathi University of Technology, Kenya. Building applied AI for African development challenges.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --surface-2: #1e222b;
+    --border: #2a2f3a;
+    --text: #e6e8ec;
+    --muted: #9aa2b1;
+    --accent: #4f9cf9;
+    --accent-2: #38d39f;
+    --radius: 14px;
+    --maxw: 960px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    padding: 64px 0 40px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #141821 0%, var(--bg) 100%);
+  }
+  header h1 { font-size: 2rem; letter-spacing: -0.02em; }
+  header .role { color: var(--accent-2); font-weight: 600; margin-top: 6px; }
+  header .affil { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+  header p.bio { margin-top: 20px; max-width: 720px; color: #cfd4dd; }
+
+  /* Sections */
+  section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: "";
+    width: 4px; height: 22px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  /* Project cards */
+  .grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    transition: border-color .2s, transform .2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-2);
+    background: rgba(56,211,159,0.1);
+    border: 1px solid rgba(56,211,159,0.25);
+    border-radius: 999px;
+    padding: 3px 10px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+  .card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 0.93rem; flex-grow: 1; }
+  .card .link {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 14px;
+    font-size: 0.82rem;
+    color: var(--text);
+  }
+  .metrics span { color: var(--muted); }
+  .metrics b { color: var(--accent); font-weight: 600; }
+
+  /* Links list */
+  .links { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .links { grid-template-columns: 1fr 1fr; } }
+  .link-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    transition: border-color .2s;
+  }
+  .link-row:hover { border-color: var(--accent); }
+  .link-row .icon { font-size: 1.2rem; }
+  .link-row .label { font-weight: 600; font-size: 0.92rem; }
+  .link-row .sub { color: var(--muted); font-size: 0.8rem; }
+
+  /* Contact */
+  .contact {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    font-size: 0.95rem;
+  }
+  .contact p { color: var(--muted); margin-bottom: 6px; }
+  .contact strong { color: var(--text); }
+
+  /* Footer */
+  footer {
+    padding: 28px 0 48px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Dr. John Mwangi Wandeto</h1>
+    <div class="role">AI for Humanity</div>
+    <div class="affil">Senior Lecturer &amp; Researcher, Information Technology · Dedan Kimathi University of Technology, Nyeri, Kenya</div>
+    <p class="bio">
+      Dr. John Mwangi Wandeto is a Senior Lecturer and researcher in Information Technology
+      at Dedan Kimathi University of Technology, Kenya. His work spans medical image processing,
+      computer vision, and self-organizing neural networks, with 29 publications on unsupervised
+      change detection and AI-driven diagnostics. He builds applied AI that addresses African
+      development challenges.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <!-- AI Barabara -->
+      <article class="card">
+        <span class="tag">Deployed Prototype · Kenya</span>
+        <h3>🚧 AI Barabara — See a pothole. Get a decision.</h3>
+        <p>
+          A working prototype built with the Kenya Urban Roads Authority (KURA). Computer vision
+          detects road defects from a single photograph; an HDM-4 economic engine returns NPV,
+          benefit-cost ratio, and IRR in under five seconds. A qualified engineer reviews and
+          approves every output before any work is scheduled.
+        </p>
+        <div class="metrics">
+          <span>mAP50 <b>0.49</b></span>
+          <span>Damage classes <b>4</b></span>
+          <span>Phase 1 <b>KES 14.87M</b></span>
+          <span>Framework <b>HDM-4</b></span>
+        </div>
+        <a class="link" href="https://ndetos.github.io/ai_barabara/" target="_blank" rel="noopener">View project →</a>
+      </article>
+
+      <!-- Coffee Rust -->
+      <article class="card">
+        <span class="tag">Research Prototype · Nyeri</span>
+        <h3>🍃 AI-Powered Early Warning for Coffee Leaf Rust</h3>
+        <p>
+          A locally-deployed, interpretable model predicting coffee rust outbreaks up to seven
+          days in advance. Trained on 9,850 KALRO samples and validated in Nyeri, it delivers
+          risk assessments via SMS, WhatsApp, or web — empowering farmers with data-driven
+          decisions before outbreaks occur.
+        </p>
+        <div class="metrics">
+          <span>Accuracy <b>77.6%</b></span>
+          <span>AUC-ROC <b>0.867</b></span>
+          <span>Nyeri validation <b>74.6%</b></span>
+        </div>
+        <a class="link" href="https://ndetos.github.io/coffee-rust/" target="_blank" rel="noopener">View project →</a>
+      </article>
+
+      <!-- Urinalysis -->
+      <article class="card">
+        <span class="tag">Research Platform · KENET-funded</span>
+        <h3>🔬 Towards Smarter, Continuous Urinalysis</h3>
+        <p>
+          An evolving research platform using image processing and AI to improve microscopic
+          urinalysis — detecting overlooked objects, assessing diagnostic impact, and building
+          longitudinal patient diagnostic histories. Supported by a KENET grant (2023–2024)
+          for early disease detection and monitoring.
+        </p>
+        <div class="metrics">
+          <span>Focus <b>Medical imaging</b></span>
+          <span>Goal <b>Early detection</b></span>
+        </div>
+        <a class="link" href="https://vision-save.dkut.ac.ke/" target="_blank" rel="noopener">View platform →</a>
+      </article>
+
+      <!-- AI Teaching Assistant -->
+      <article class="card">
+        <span class="tag">Execution Layer · AI Web</span>
+        <h3>🤖 AI Teaching Assistant</h3>
+        <p>
+          An execution-layer approach connecting AI systems and enterprise applications to the
+          live web. It turns ordinary websites into reliable, structured sources of information
+          and executable workflows — combining task-specialized AI at design time with
+          deterministic automation at runtime.
+        </p>
+        <div class="metrics">
+          <span>Approach <b>AI + automation</b></span>
+          <span>Runtime <b>Deterministic</b></span>
+        </div>
+        <a class="link" href="https://ndetos.github.io/ai-teaching-assistant/" target="_blank" rel="noopener">View project →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Profiles &amp; Links</h2>
+    <div class="links">
+      <a class="link-row" href="https://www.linkedin.com/in/johnwandeto/" target="_blank" rel="noopener">
+        <span class="icon">💼</span>
+        <span>
+          <span class="label">LinkedIn</span><br>
+          <span class="sub">johnwandeto</span>
+        </span>
+      </a>
+      <a class="link-row" href="https://orcid.org/0000-0002-7502-2517" target="_blank" rel="noopener">
+        <span class="icon">🆔</span>
+        <span>
+          <span class="label">ORCID</span><br>
+          <span class="sub">0000-0002-7502-2517</span>
+        </span>
+      </a>
+      <a class="link-row" href="https://scholar.google.com/citations?user=ABgpZrUAAAAJ&hl=en" target="_blank" rel="noopener">
+        <span class="icon">📚</span>
+        <span>
+          <span class="label">Google Scholar</span><br>
+          <span class="sub">29 publications</span>
+        </span>
+      </a>
+      <a class="link-row" href="https://csit.dkut.ac.ke/departments/it/dr-john-mwangi-wandeto/" target="_blank" rel="noopener">
+        <span class="icon">🏛️</span>
+        <span>
+          <span class="label">DKUT Profile</span><br>
+          <span class="sub">Department of IT</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p><strong>Email:</strong> <a href="mailto:john.wandeto@dkut.ac.ke">john.wandeto@dkut.ac.ke</a></p>
+      <p><strong>Institution:</strong> Dedan Kimathi University of Technology, Nyeri, Kenya</p>
+      <p style="margin-top:14px; font-size:0.88rem;">
+        Open to research collaborations, policy engagement, and partnerships that advance
+        responsible, locally-grounded AI for Africa.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> John Mwangi Wandeto · Built for African AI innovation
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
