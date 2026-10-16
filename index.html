@@ -87,6 +87,17 @@
     margin-bottom: 12px;
     align-self: flex-start;
   }
+    .card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .card .tag.sdg {
+    color: var(--accent);
+    background: rgba(79,156,249,0.1);
+    border-color: rgba(79,156,249,0.3);
+  }
   .card h3 { font-size: 1.08rem; margin-bottom: 8px; }
   .card p { color: var(--muted); font-size: 0.93rem; flex-grow: 1; }
   .card .link {
@@ -165,15 +176,20 @@
     <h2>Projects</h2>
     <div class="grid">
 
-      <!-- AI Barabara -->
+      <!-- 1. AI Barabara -->
       <article class="card">
-        <span class="tag">Deployed Prototype · Kenya</span>
+        <div class="tags">
+          <span class="tag">Deployed Prototype · Kenya</span>
+          <span class="tag sdg">SDG 9 · Industry &amp; Innovation</span>
+        </div>
         <h3>🚧 AI Barabara — See a pothole. Get a decision.</h3>
         <p>
-          A working prototype built with the Kenya Urban Roads Authority (KURA). Computer vision
-          detects road defects from a single photograph; an HDM-4 economic engine returns NPV,
-          benefit-cost ratio, and IRR in under five seconds. A qualified engineer reviews and
-          approves every output before any work is scheduled.
+          <strong>Problem:</strong> Road defects go unrepaired because inspection is slow,
+          subjective, and disconnected from funding decisions. <strong>Solution:</strong>
+          A working prototype built with the Kenya Urban Roads Authority (KURA). Computer
+          vision detects road defects from a single photograph; an HDM-4 economic engine
+          returns NPV, benefit-cost ratio, and IRR in under five seconds. A qualified
+          engineer reviews and approves every output before any work is scheduled.
         </p>
         <div class="metrics">
           <span>mAP50 <b>0.49</b></span>
@@ -184,15 +200,47 @@
         <a class="link" href="https://ndetos.github.io/ai_barabara/" target="_blank" rel="noopener">View project →</a>
       </article>
 
-      <!-- Coffee Rust -->
+      <!-- 2. AI Teaching Assistant -->
       <article class="card">
-        <span class="tag">Research Prototype · Nyeri</span>
+        <div class="tags">
+          <span class="tag">Offline Classroom AI · AGPL-3.0</span>
+          <span class="tag sdg">SDG 4 · Quality Education</span>
+        </div>
+        <h3>🎓 AI Teaching Assistant — Stop the Silence</h3>
+        <p>
+          <strong>Problem:</strong> In large classes, students who don't understand stay
+          silent — fear, shyness, or intimidation hides gaps until exams expose them.
+          <strong>Solution:</strong> A private AI tutor, built by a lecturer and
+          TSC-registered educator, that lets students ask anonymously, 24/7, with no fear
+          of judgment. It runs entirely on your laptop — no internet needed during class —
+          and answers from your own course materials. A live analytics dashboard shows
+          exactly which concepts the class didn't understand, so you can intervene in
+          real time.
+        </p>
+        <div class="metrics">
+          <span>Deployment <b>Offline / local</b></span>
+          <span>Data <b>Never leaves your laptop</b></span>
+          <span>Install <b>One command</b></span>
+          <span>License <b>AGPL-3.0</b></span>
+        </div>
+        <a class="link" href="https://ndetos.github.io/ai-teaching-assistant/" target="_blank" rel="noopener">View project →</a>
+      </article>
+
+      <!-- 3. Coffee Rust -->
+      <article class="card">
+        <div class="tags">
+          <span class="tag">Research Prototype · Nyeri</span>
+          <span class="tag sdg">SDG 2 · Zero Hunger</span>
+        </div>
         <h3>🍃 AI-Powered Early Warning for Coffee Leaf Rust</h3>
         <p>
-          A locally-deployed, interpretable model predicting coffee rust outbreaks up to seven
-          days in advance. Trained on 9,850 KALRO samples and validated in Nyeri, it delivers
-          risk assessments via SMS, WhatsApp, or web — empowering farmers with data-driven
-          decisions before outbreaks occur.
+          <strong>Problem:</strong> Farmers in Nyeri lose up to 80% of their yield to
+          coffee leaf rust, and current warnings arrive only after outbreaks have taken
+          hold. <strong>Solution:</strong> A locally-deployed, interpretable model that
+          predicts coffee rust outbreaks up to seven days in advance. Trained on 9,850
+          KALRO samples and validated in Nyeri, it delivers risk assessments via SMS,
+          WhatsApp, or web — empowering farmers with data-driven decisions before
+          outbreaks occur.
         </p>
         <div class="metrics">
           <span>Accuracy <b>77.6%</b></span>
@@ -202,38 +250,28 @@
         <a class="link" href="https://ndetos.github.io/coffee-rust/" target="_blank" rel="noopener">View project →</a>
       </article>
 
-      <!-- Urinalysis -->
+      <!-- 4. Urinalysis -->
       <article class="card">
-        <span class="tag">Research Platform · KENET-funded</span>
+        <div class="tags">
+          <span class="tag">Research Platform · KENET-funded</span>
+          <span class="tag sdg">SDG 3 · Good Health</span>
+        </div>
         <h3>🔬 Towards Smarter, Continuous Urinalysis</h3>
         <p>
-          An evolving research platform using image processing and AI to improve microscopic
-          urinalysis — detecting overlooked objects, assessing diagnostic impact, and building
-          longitudinal patient diagnostic histories. Supported by a KENET grant (2023–2024)
-          for early disease detection and monitoring.
+          <strong>Problem:</strong> Routine urinalysis misses diagnostically relevant
+          objects — and each missed object is a missed opportunity for early
+          intervention. <strong>Solution:</strong> An evolving research platform using
+          image processing and AI to improve microscopic urinalysis — detecting
+          overlooked objects, assessing diagnostic impact, and building longitudinal
+          patient diagnostic histories. Supported by a KENET grant (2023–2024) for early
+          disease detection and monitoring.
         </p>
         <div class="metrics">
           <span>Focus <b>Medical imaging</b></span>
           <span>Goal <b>Early detection</b></span>
+          <span>Funding <b>KENET 2023–24</b></span>
         </div>
         <a class="link" href="https://vision-save.dkut.ac.ke/" target="_blank" rel="noopener">View platform →</a>
-      </article>
-
-      <!-- AI Teaching Assistant -->
-      <article class="card">
-        <span class="tag">Execution Layer · AI Web</span>
-        <h3>🤖 AI Teaching Assistant</h3>
-        <p>
-          An execution-layer approach connecting AI systems and enterprise applications to the
-          live web. It turns ordinary websites into reliable, structured sources of information
-          and executable workflows — combining task-specialized AI at design time with
-          deterministic automation at runtime.
-        </p>
-        <div class="metrics">
-          <span>Approach <b>AI + automation</b></span>
-          <span>Runtime <b>Deterministic</b></span>
-        </div>
-        <a class="link" href="https://ndetos.github.io/ai-teaching-assistant/" target="_blank" rel="noopener">View project →</a>
       </article>
 
     </div>
@@ -268,7 +306,7 @@
       <a class="link-row" href="https://csit.dkut.ac.ke/departments/it/dr-john-mwangi-wandeto/" target="_blank" rel="noopener">
         <span class="icon">🏛️</span>
         <span>
-          <span class="label">DKUT Profile</span><br>
+          <span class="label">DeKUT Profile</span><br>
           <span class="sub">Department of IT</span>
         </span>
       </a>
