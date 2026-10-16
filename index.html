@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. John Mwangi Wandeto — AI for Humanity</title>
-<meta name="description" content="Dr. John Mwangi Wandeto — Senior Lecturer and AI researcher at Dedan Kimathi University of Technology, Kenya. Building applied AI for African development challenges.">
+<title>NdetoLabs — AI for Humanity</title>
+<meta name="description" content="NdetoLabs, founded by Dr. John Mwangi Wandeto, builds applied AI addressing African development priorities — infrastructure, education, agriculture, and health.">
 <style>
   :root {
     --bg: #0f1115;
@@ -37,9 +37,9 @@
     border-bottom: 1px solid var(--border);
     background: linear-gradient(180deg, #141821 0%, var(--bg) 100%);
   }
-  header h1 { font-size: 2rem; letter-spacing: -0.02em; }
+  header h1 { font-size: 2.1rem; letter-spacing: -0.02em; }
   header .role { color: var(--accent-2); font-weight: 600; margin-top: 6px; }
-  header .affil { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+  header .affil { color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
   header p.bio { margin-top: 20px; max-width: 720px; color: #cfd4dd; }
 
   /* Sections */
@@ -60,6 +60,13 @@
     border-radius: 2px;
   }
 
+  /* Projects intro */
+  .section-intro {
+    color: var(--muted);
+    margin-bottom: 28px;
+    max-width: 760px;
+  }
+
   /* Project cards */
   .grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
   @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
@@ -73,6 +80,12 @@
     flex-direction: column;
   }
   .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
   .card .tag {
     display: inline-block;
     font-size: 0.72rem;
@@ -84,22 +97,42 @@
     border: 1px solid rgba(56,211,159,0.25);
     border-radius: 999px;
     padding: 3px 10px;
-    margin-bottom: 12px;
-    align-self: flex-start;
-  }
-    .card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 12px;
   }
   .card .tag.sdg {
     color: var(--accent);
     background: rgba(79,156,249,0.1);
     border-color: rgba(79,156,249,0.3);
   }
-  .card h3 { font-size: 1.08rem; margin-bottom: 8px; }
-  .card p { color: var(--muted); font-size: 0.93rem; flex-grow: 1; }
+  .card h3 { font-size: 1.08rem; margin-bottom: 10px; }
+  .card p {
+    color: var(--muted);
+    font-size: 0.93rem;
+    flex-grow: 1;
+  }
+  .card p.prob, .card p.sol {
+    color: var(--muted);
+    font-size: 0.93rem;
+    margin-bottom: 10px;
+    flex-grow: 0;
+  }
+  .card p.sol { margin-bottom: 0; }
+  .card p .lead {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .card .team {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+  .card .team strong {
+    color: var(--text);
+    font-style: normal;
+    font-weight: 600;
+  }
   .card .link {
     margin-top: 16px;
     font-size: 0.9rem;
@@ -158,15 +191,17 @@
 
 <header>
   <div class="wrap">
-    <h1>Dr. John Mwangi Wandeto</h1>
+    <h1>NdetoLabs</h1>
     <div class="role">AI for Humanity</div>
-    <div class="affil">Senior Lecturer &amp; Researcher, Information Technology · Dedan Kimathi University of Technology, Nyeri, Kenya</div>
+    <div class="affil">Founded by Dr. John Mwangi Wandeto · Senior Lecturer &amp; Researcher, Information Technology · Dedan Kimathi University of Technology, Nyeri, Kenya</div>
     <p class="bio">
-      Dr. John Mwangi Wandeto is a Senior Lecturer and researcher in Information Technology
-      at Dedan Kimathi University of Technology, Kenya. His work spans medical image processing,
-      computer vision, and self-organizing neural networks, with 29 publications on unsupervised
-      change detection and AI-driven diagnostics. He builds applied AI that addresses African
-      development challenges.
+      NdetoLabs builds applied AI that addresses African development priorities. Founded
+      by Dr. John Mwangi Wandeto — a Senior Lecturer and researcher in Information
+      Technology at Dedan Kimathi University of Technology — the lab translates
+      computer-vision and machine-learning research into deployable tools. His work spans
+      medical image processing, computer vision, and self-organizing neural networks, with
+      29 publications on unsupervised change detection and AI-driven diagnostics. Each
+      project is developed with Kenyan institutions and validated on local data.
     </p>
   </div>
 </header>
@@ -174,6 +209,12 @@
 <section>
   <div class="wrap">
     <h2>Projects</h2>
+    <p class="section-intro">
+      Applied AI addressing African development priorities — infrastructure, education,
+      agriculture, and health. Each project is grounded in a Kenyan institution, built
+      with or validated by local partners, and supported by measured results or formal
+      endorsements.
+    </p>
     <div class="grid">
 
       <!-- 1. AI Barabara -->
@@ -183,13 +224,16 @@
           <span class="tag sdg">SDG 9 · Industry &amp; Innovation</span>
         </div>
         <h3>🚧 AI Barabara — See a pothole. Get a decision.</h3>
-        <p>
-          <strong>Problem:</strong> Road defects go unrepaired because inspection is slow,
-          subjective, and disconnected from funding decisions. <strong>Solution:</strong>
-          A working prototype built with the Kenya Urban Roads Authority (KURA). Computer
-          vision detects road defects from a single photograph; an HDM-4 economic engine
-          returns NPV, benefit-cost ratio, and IRR in under five seconds. A qualified
-          engineer reviews and approves every output before any work is scheduled.
+        <p class="prob">
+          <span class="lead">Problem:</span> Road defects go unrepaired because inspection
+          is slow, subjective, and disconnected from funding decisions.
+        </p>
+        <p class="sol">
+          <span class="lead">Solution:</span> A working prototype built with the Kenya
+          Urban Roads Authority (KURA). Computer vision detects road defects from a single
+          photograph; an HDM-4 economic engine returns NPV, benefit-cost ratio, and IRR in
+          under five seconds. A qualified engineer reviews and approves every output before
+          any work is scheduled.
         </p>
         <div class="metrics">
           <span>mAP50 <b>0.49</b></span>
@@ -197,6 +241,10 @@
           <span>Phase 1 <b>KES 14.87M</b></span>
           <span>Framework <b>HDM-4</b></span>
         </div>
+        <p class="team">
+          <strong>Team:</strong> 2 CS PhDs · 1 GIS lecturer · 1 civil engineer · research
+          assistants — DeKUT + KURA.
+        </p>
         <a class="link" href="https://ndetos.github.io/ai_barabara/" target="_blank" rel="noopener">View project →</a>
       </article>
 
@@ -207,10 +255,13 @@
           <span class="tag sdg">SDG 4 · Quality Education</span>
         </div>
         <h3>🎓 AI Teaching Assistant — Stop the Silence</h3>
-        <p>
-          <strong>Problem:</strong> In large classes, students who don't understand stay
-          silent — fear, shyness, or intimidation hides gaps until exams expose them.
-          <strong>Solution:</strong> A private AI tutor, built by a lecturer and
+        <p class="prob">
+          <span class="lead">Problem:</span> In large classes, students who don't
+          understand stay silent — fear, shyness, or intimidation hides gaps until exams
+          expose them.
+        </p>
+        <p class="sol">
+          <span class="lead">Solution:</span> A private AI tutor, built by a lecturer and
           TSC-registered educator, that lets students ask anonymously, 24/7, with no fear
           of judgment. It runs entirely on your laptop — no internet needed during class —
           and answers from your own course materials. A live analytics dashboard shows
@@ -223,6 +274,10 @@
           <span>Install <b>One command</b></span>
           <span>License <b>AGPL-3.0</b></span>
         </div>
+        <p class="team">
+          <strong>Team:</strong> 1 CS PhD (education technology) · 1 instructional designer
+          · research assistants — DeKUT.
+        </p>
         <a class="link" href="https://ndetos.github.io/ai-teaching-assistant/" target="_blank" rel="noopener">View project →</a>
       </article>
 
@@ -233,10 +288,13 @@
           <span class="tag sdg">SDG 2 · Zero Hunger</span>
         </div>
         <h3>🍃 AI-Powered Early Warning for Coffee Leaf Rust</h3>
-        <p>
-          <strong>Problem:</strong> Farmers in Nyeri lose up to 80% of their yield to
-          coffee leaf rust, and current warnings arrive only after outbreaks have taken
-          hold. <strong>Solution:</strong> A locally-deployed, interpretable model that
+        <p class="prob">
+          <span class="lead">Problem:</span> Farmers in Nyeri lose up to 80% of their
+          yield to coffee leaf rust, and current warnings arrive only after outbreaks have
+          taken hold.
+        </p>
+        <p class="sol">
+          <span class="lead">Solution:</span> A locally-deployed, interpretable model that
           predicts coffee rust outbreaks up to seven days in advance. Trained on 9,850
           KALRO samples and validated in Nyeri, it delivers risk assessments via SMS,
           WhatsApp, or web — empowering farmers with data-driven decisions before
@@ -247,6 +305,10 @@
           <span>AUC-ROC <b>0.867</b></span>
           <span>Nyeri validation <b>74.6%</b></span>
         </div>
+        <p class="team">
+          <strong>Team:</strong> 1 CS PhD · 1 agricultural scientist · 1 data analyst ·
+          research assistants — DeKUT + Nyeri County Government.
+        </p>
         <a class="link" href="https://ndetos.github.io/coffee-rust/" target="_blank" rel="noopener">View project →</a>
       </article>
 
@@ -257,20 +319,27 @@
           <span class="tag sdg">SDG 3 · Good Health</span>
         </div>
         <h3>🔬 Towards Smarter, Continuous Urinalysis</h3>
-        <p>
-          <strong>Problem:</strong> Routine urinalysis misses diagnostically relevant
-          objects — and each missed object is a missed opportunity for early
-          intervention. <strong>Solution:</strong> An evolving research platform using
-          image processing and AI to improve microscopic urinalysis — detecting
-          overlooked objects, assessing diagnostic impact, and building longitudinal
-          patient diagnostic histories. Supported by a KENET grant (2023–2024) for early
-          disease detection and monitoring.
+        <p class="prob">
+          <span class="lead">Problem:</span> Routine urinalysis misses diagnostically
+          relevant objects — and each missed object is a missed opportunity for early
+          intervention.
+        </p>
+        <p class="sol">
+          <span class="lead">Solution:</span> An evolving research platform using image
+          processing and AI to improve microscopic urinalysis — detecting overlooked
+          objects, assessing diagnostic impact, and building longitudinal patient
+          diagnostic histories. Supported by a KENET grant (2023–2024) for early disease
+          detection and monitoring.
         </p>
         <div class="metrics">
           <span>Focus <b>Medical imaging</b></span>
           <span>Goal <b>Early detection</b></span>
           <span>Funding <b>KENET 2023–24</b></span>
         </div>
+        <p class="team">
+          <strong>Team:</strong> 1 CS PhD · 1 medical imaging specialist · clinical
+          collaborators · research assistants — DeKUT + health partners.
+        </p>
         <a class="link" href="https://vision-save.dkut.ac.ke/" target="_blank" rel="noopener">View platform →</a>
       </article>
 
@@ -319,10 +388,11 @@
     <h2>Contact</h2>
     <div class="contact">
       <p><strong>Email:</strong> <a href="mailto:john.wandeto@dkut.ac.ke">john.wandeto@dkut.ac.ke</a></p>
+      <p><strong>Lab:</strong> NdetoLabs, Kenya</p>
       <p><strong>Institution:</strong> Dedan Kimathi University of Technology, Nyeri, Kenya</p>
       <p style="margin-top:14px; font-size:0.88rem;">
-        Open to research collaborations, policy engagement, and partnerships that advance
-        responsible, locally-grounded AI for Africa.
+        Open to research collaborations, policy engagement, compute partnerships, and
+        funding that advances responsible, locally-grounded AI for Africa.
       </p>
     </div>
   </div>
@@ -330,7 +400,7 @@
 
 <footer>
   <div class="wrap">
-    © <span id="year"></span> John Mwangi Wandeto · Built for African AI innovation
+    © <span id="year"></span> NdetoLabs · Founded by Dr. John Mwangi Wandeto · Built for African AI innovation
   </div>
 </footer>
 
